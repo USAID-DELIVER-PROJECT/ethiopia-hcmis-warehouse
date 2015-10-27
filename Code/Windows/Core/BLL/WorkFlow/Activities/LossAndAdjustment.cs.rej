@@ -1,0 +1,15 @@
+diff a/Windows/Core/BLL/WorkFlow/Activities/LossAndAdjustment.cs b/Windows/Core/BLL/WorkFlow/Activities/LossAndAdjustment.cs	(rejected hunks)
+@@ -49,10 +49,12 @@
+         public DataTable GetAllTransaction(int storeId)
+         {
+             this.FlushData();
+-            this.LoadFromRawSql(String.Format("SELECT (d.Quantity / rd.QtyPerPack) as Quantity, (d.Quantity / rd.QtyPerPack) * rd.Cost as Cost  , d.*, vw.FullItemName, vw.StockCode, dr.Reason FROM LossAndAdjustment d join ReceiveDoc rd on d.RecID = rd.ID join vwGetAllItems vw on d.ItemID = vw.ID join LossAndAdjustmentReason dr on d.ReasonID = dr.ID  WHERE StoreId = {0} ORDER BY Date DESC", storeId));
++            this.LoadFromRawSql(HCMIS.Repository.Queries.LossAndAdjustment.SelectGetAllTransaction(storeId));
+             return this.DataTable;
+         }
+ 
++    
++
+         /// <summary>
+         /// Get list of loss and adjustment transactions by reason of loss and adjustment
+         /// </summary>

@@ -1,0 +1,9 @@
+diff a/Windows/Presentation/Desktop/Forms/WorkFlow/Issue/WishListForm.designer.cs b/Windows/Presentation/Desktop/Forms/WorkFlow/Issue/WishListForm.designer.cs	(rejected hunks)
+@@ -1338,7 +1338,6 @@
+             // cboRequiredContainer
+             // 
+             this.cboRequiredContainer.FormattingEnabled = true;
+-            this.cboRequiredContainer.Location = new System.Drawing.Point(348, 12);
+             this.cboRequiredContainer.Location = new System.Drawing.Point(349, 12);
+             this.cboRequiredContainer.Name = "cboRequiredContainer";
+             this.cboRequiredContainer.Size = new System.Drawing.Size(68, 21);

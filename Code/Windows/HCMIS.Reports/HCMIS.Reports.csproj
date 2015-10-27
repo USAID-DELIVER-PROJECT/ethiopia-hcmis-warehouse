@@ -1,0 +1,789 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D897E69B-612E-4F60-98D9-83BE0BA4BF0B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HCMIS.Reports</RootNamespace>
+    <AssemblyName>HCMIS.Reports</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CalendarLib">
+      <HintPath>..\Presentation\Desktop\Common DLLs\CalendarLib.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v14.1.Wizard, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v14.1.UI, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v14.1.Extensions, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EthiopianDate">
+      <HintPath>..\Presentation\Desktop\Common DLLs\EthiopianDate.dll</HintPath>
+    </Reference>
+    <Reference Include="MyGeneration.dOOdads">
+      <HintPath>..\Presentation\Desktop\Common DLLs\MyGeneration.dOOdads.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DeliveryNote.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DeliveryNote.Designer.cs">
+      <DependentUpon>DeliveryNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\AverageCostMarginReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\AverageCostMarginReport.Designer.cs">
+      <DependentUpon>AverageCostMarginReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\BeginningBalanceCostingReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\BeginningBalanceCostingReport.Designer.cs">
+      <DependentUpon>BeginningBalanceCostingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\CostAnalysis.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\CostAnalysis.Designer.cs">
+      <DependentUpon>CostAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\CostAnalysisSubReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\CostAnalysisSubReport.Designer.cs">
+      <DependentUpon>CostAnalysisSubReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\CostBuildUp.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\CostBuildUp.Designer.cs">
+      <DependentUpon>CostBuildUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\CostBuildUpSubReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\CostBuildUpSubReport.Designer.cs">
+      <DependentUpon>CostBuildUpSubReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\CostCalculationPrintout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\CostCalculationPrintout.Designer.cs">
+      <DependentUpon>CostCalculationPrintout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\CostOfGoodSold.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\CostOfGoodSold.Designer.cs">
+      <DependentUpon>CostOfGoodSold.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\CostReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\CostReport.Designer.cs">
+      <DependentUpon>CostReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\CostReportCenter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\CostReportCenter.Designer.cs">
+      <DependentUpon>CostReportCenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\CostTierPriceList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\CostTierPriceList.Designer.cs">
+      <DependentUpon>CostTierPriceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\CostValidationReport\CostValidationReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\CostValidationReport\CostValidationReport.Designer.cs">
+      <DependentUpon>CostValidationReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\CostValidationReport\DeliveryNoteValidation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\CostValidationReport\DeliveryNoteValidation.Designer.cs">
+      <DependentUpon>DeliveryNoteValidation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\CostValidationReport\PickListCostValidationReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\CostValidationReport\PickListCostValidationReport.Designer.cs">
+      <DependentUpon>PickListCostValidationReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\IssuedAmoutByYear.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\IssuedAmoutByYear.Designer.cs">
+      <DependentUpon>IssuedAmoutByYear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\IssuedAmoutPerMonth.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\IssuedAmoutPerMonth.Designer.cs">
+      <DependentUpon>IssuedAmoutPerMonth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\MovingAverage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\MovingAverage.Designer.cs">
+      <DependentUpon>MovingAverage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\PreviousCostPrintout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\PreviousCostPrintout.Designer.cs">
+      <DependentUpon>PreviousCostPrintout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\PriceList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\PriceList.designer.cs">
+      <DependentUpon>PriceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\PriceListByManufacturer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\PriceListByManufacturer.Designer.cs">
+      <DependentUpon>PriceListByManufacturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\PriceOverridePrintout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\PriceOverridePrintout.Designer.cs">
+      <DependentUpon>PriceOverridePrintout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\ReceivedAmoutByYear.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\ReceivedAmoutByYear.Designer.cs">
+      <DependentUpon>ReceivedAmoutByYear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\ReceivedAmoutPerMonth.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\ReceivedAmoutPerMonth.Designer.cs">
+      <DependentUpon>ReceivedAmoutPerMonth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\VitalReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finance\VitalReport.Designer.cs">
+      <DependentUpon>VitalReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\DataSetY.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetY.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ReportHelper.cs" />
+    <Compile Include="Helpers\ReportingReportFactory.cs" />
+    <Compile Include="Helpers\TheDataSet.cs">
+      <DependentUpon>TheDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Helpers\TheDataSet.Designer.cs">
+      <DependentUpon>TheDataSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\TheDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TheDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\WorkflowReportFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\AnnualRevenueExtraReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\AnnualRevenueExtraReport.Designer.cs">
+      <DependentUpon>AnnualRevenueExtraReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\BinCardReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\BinCardReport.designer.cs">
+      <DependentUpon>BinCardReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FacilityTrendReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FacilityTrendReport.Designer.cs">
+      <DependentUpon>FacilityTrendReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\InventoryCountSheetLocalTender.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\InventoryCountSheetLocalTender.Designer.cs">
+      <DependentUpon>InventoryCountSheetLocalTender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\IssueDetailForFacilityReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\IssueDetailForFacilityReport.Designer.cs">
+      <DependentUpon>IssueDetailForFacilityReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\OrderSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\OrderSummary.Designer.cs">
+      <DependentUpon>OrderSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Model19Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Model19Report.Designer.cs">
+      <DependentUpon>Model19Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Model20Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Model20Report.Designer.cs">
+      <DependentUpon>Model20Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\StockStatusByPhysicalStoreWithLocation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\StockStatusByPhysicalStoreWithLocation.Designer.cs">
+      <DependentUpon>StockStatusByPhysicalStoreWithLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CutOffNumberReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CutOffNumberReport.Designer.cs">
+      <DependentUpon>CutOffNumberReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DistributionBreakdown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DistributionBreakdown.Designer.cs">
+      <DependentUpon>DistributionBreakdown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DraftInventoryPrintout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DraftInventoryPrintout.Designer.cs">
+      <DependentUpon>DraftInventoryPrintout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ExpiryReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ExpiryReport.Designer.cs">
+      <DependentUpon>ExpiryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\InventoryCountSheet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\InventoryCountSheet.Designer.cs">
+      <DependentUpon>InventoryCountSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\InventoryOverageShortageReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\InventoryOverageShortageReport.Designer.cs">
+      <DependentUpon>InventoryOverageShortageReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\OutstandingTransactions.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\OutstandingTransactions.Designer.cs">
+      <DependentUpon>OutstandingTransactions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SOHReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\SOHReport.Designer.cs">
+      <DependentUpon>SOHReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SOHReportForFinance.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\SOHReportForFinance.Designer.cs">
+      <DependentUpon>SOHReportForFinance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\StockCardReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\StockCardReport.designer.cs">
+      <DependentUpon>StockCardReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\StockOut.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\StockOut.designer.cs">
+      <DependentUpon>StockOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\StockStatus.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\StockStatus.Designer.cs">
+      <DependentUpon>StockStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\StockStatusByAccount.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\StockStatusByAccount.Designer.cs">
+      <DependentUpon>StockStatusByAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\StockStatusByAccountWithUnitPrice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\StockStatusByAccountWithUnitPrice.Designer.cs">
+      <DependentUpon>StockStatusByAccountWithUnitPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\StockStatusByCommodity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\StockStatusByCommodity.Designer.cs">
+      <DependentUpon>StockStatusByCommodity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\StockStatusByPhysicalStore.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\StockStatusByPhysicalStore.Designer.cs">
+      <DependentUpon>StockStatusByPhysicalStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\Activities\Disposal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Workflow\Activities\Disposal.Designer.cs">
+      <DependentUpon>Disposal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\Activities\ErrorCorrection.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Workflow\Activities\ErrorCorrection.designer.cs">
+      <DependentUpon>ErrorCorrection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\Activities\PickFaceReplenishment.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Workflow\Activities\PickFaceReplenishment.Designer.cs">
+      <DependentUpon>PickFaceReplenishment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\Issue\CashInvoice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Workflow\Issue\CashInvoice.Designer.cs">
+      <DependentUpon>CashInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\Issue\CashInvoice_Smaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Workflow\Issue\CashInvoice_Smaller.Designer.cs">
+      <DependentUpon>CashInvoice_Smaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\Issue\CreditInvoice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Workflow\Issue\CreditInvoice.Designer.cs">
+      <DependentUpon>CreditInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\Issue\CreditInvoice_Smaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Workflow\Issue\CreditInvoice_Smaller.Designer.cs">
+      <DependentUpon>CreditInvoice_Smaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\Issue\DeliveryNoteForIssue.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Workflow\Issue\DeliveryNoteForIssue.Designer.cs">
+      <DependentUpon>DeliveryNoteForIssue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\Issue\IPicklist.cs" />
+    <Compile Include="Workflow\Issue\IssueOrderList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Workflow\Issue\IssueOrderList.Designer.cs">
+      <DependentUpon>IssueOrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\Issue\PickList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Workflow\Issue\PickList.Designer.cs">
+      <DependentUpon>PickList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\Issue\PricedPickList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Workflow\Issue\PricedPickList.Designer.cs">
+      <DependentUpon>PricedPickList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\Issue\StoreTransferPrintOut.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Workflow\Issue\StoreTransferPrintOut.Designer.cs">
+      <DependentUpon>StoreTransferPrintOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\Issue\STVonA4.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Workflow\Issue\STVonA4.Designer.cs">
+      <DependentUpon>STVonA4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\Issue\STVonHeadedPaper.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Workflow\Issue\STVonHeadedPaper.Designer.cs">
+      <DependentUpon>STVonHeadedPaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\Issue\STVonNonHeadedPaper.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Workflow\Issue\STVonNonHeadedPaper.Designer.cs">
+      <DependentUpon>STVonNonHeadedPaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\Receive\GoodsReceivingNote.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Workflow\Receive\GoodsReceivingNote.designer.cs">
+      <DependentUpon>GoodsReceivingNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\Receive\ReceiptConfirmationPrintout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Workflow\Receive\ReceiptConfirmationPrintout.Designer.cs">
+      <DependentUpon>ReceiptConfirmationPrintout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\Receive\ReceiptConfirmationPrintoutStore.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Workflow\Receive\ReceiptConfirmationPrintoutStore.designer.cs">
+      <DependentUpon>ReceiptConfirmationPrintoutStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\Receive\ReceiptConfirmationShortagePrintout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Workflow\Receive\ReceiptConfirmationShortagePrintout.Designer.cs">
+      <DependentUpon>ReceiptConfirmationShortagePrintout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\Receive\ReceiptConfirmationShortagePrintoutStore.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Workflow\Receive\ReceiptConfirmationShortagePrintoutStore.designer.cs">
+      <DependentUpon>ReceiptConfirmationShortagePrintoutStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\Receive\SRMPrintout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Workflow\Receive\SRMPrintout.Designer.cs">
+      <DependentUpon>SRMPrintout.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DeliveryNote.resx">
+      <DependentUpon>DeliveryNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\AverageCostMarginReport.resx">
+      <DependentUpon>AverageCostMarginReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\BeginningBalanceCostingReport.resx">
+      <DependentUpon>BeginningBalanceCostingReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\CostAnalysis.resx">
+      <DependentUpon>CostAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\CostAnalysisSubReport.resx">
+      <DependentUpon>CostAnalysisSubReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\CostBuildUp.resx">
+      <DependentUpon>CostBuildUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\CostBuildUpSubReport.resx">
+      <DependentUpon>CostBuildUpSubReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\CostCalculationPrintout.resx">
+      <DependentUpon>CostCalculationPrintout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\CostOfGoodSold.resx">
+      <DependentUpon>CostOfGoodSold.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\CostReport.resx">
+      <DependentUpon>CostReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\CostReportCenter.resx">
+      <DependentUpon>CostReportCenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\CostTierPriceList.resx">
+      <DependentUpon>CostTierPriceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\CostValidationReport\CostValidationReport.resx">
+      <DependentUpon>CostValidationReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\CostValidationReport\DeliveryNoteValidation.resx">
+      <DependentUpon>DeliveryNoteValidation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\CostValidationReport\PickListCostValidationReport.resx">
+      <DependentUpon>PickListCostValidationReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\IssuedAmoutByYear.resx">
+      <DependentUpon>IssuedAmoutByYear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\IssuedAmoutPerMonth.resx">
+      <DependentUpon>IssuedAmoutPerMonth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\MovingAverage.resx">
+      <DependentUpon>MovingAverage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\PreviousCostPrintout.resx">
+      <DependentUpon>PreviousCostPrintout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\PriceList.resx">
+      <DependentUpon>PriceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\PriceListByManufacturer.resx">
+      <DependentUpon>PriceListByManufacturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\PriceOverridePrintout.resx">
+      <DependentUpon>PriceOverridePrintout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\ReceivedAmoutByYear.resx">
+      <DependentUpon>ReceivedAmoutByYear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\ReceivedAmoutPerMonth.resx">
+      <DependentUpon>ReceivedAmoutPerMonth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\VitalReport.resx">
+      <DependentUpon>VitalReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Reports\AnnualRevenueExtraReport.resx">
+      <DependentUpon>AnnualRevenueExtraReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\BinCardReport.resx">
+      <DependentUpon>BinCardReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FacilityTrendReport.resx">
+      <DependentUpon>FacilityTrendReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\InventoryCountSheetLocalTender.resx">
+      <DependentUpon>InventoryCountSheetLocalTender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\IssueDetailForFacilityReport.resx">
+      <DependentUpon>IssueDetailForFacilityReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\OrderSummary.resx">
+      <DependentUpon>OrderSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Model19Report.resx">
+      <DependentUpon>Model19Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Model20Report.resx">
+      <DependentUpon>Model20Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockStatusByPhysicalStoreWithLocation.resx">
+      <DependentUpon>StockStatusByPhysicalStoreWithLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CutOffNumberReport.resx">
+      <DependentUpon>CutOffNumberReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DistributionBreakdown.resx">
+      <DependentUpon>DistributionBreakdown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DraftInventoryPrintout.resx">
+      <DependentUpon>DraftInventoryPrintout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ExpiryReport.resx">
+      <DependentUpon>ExpiryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\InventoryCountSheet.resx">
+      <DependentUpon>InventoryCountSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\InventoryOverageShortageReport.resx">
+      <DependentUpon>InventoryOverageShortageReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\OutstandingTransactions.resx">
+      <DependentUpon>OutstandingTransactions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SOHReport.resx">
+      <DependentUpon>SOHReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SOHReportForFinance.resx">
+      <DependentUpon>SOHReportForFinance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockCardReport.resx">
+      <DependentUpon>StockCardReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockOut.resx">
+      <DependentUpon>StockOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockStatus.resx">
+      <DependentUpon>StockStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockStatusByAccount.resx">
+      <DependentUpon>StockStatusByAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockStatusByAccountWithUnitPrice.resx">
+      <DependentUpon>StockStatusByAccountWithUnitPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockStatusByCommodity.resx">
+      <DependentUpon>StockStatusByCommodity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockStatusByPhysicalStore.resx">
+      <DependentUpon>StockStatusByPhysicalStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\Activities\Disposal.resx">
+      <DependentUpon>Disposal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\Activities\ErrorCorrection.resx">
+      <DependentUpon>ErrorCorrection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\Activities\PickFaceReplenishment.resx">
+      <DependentUpon>PickFaceReplenishment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\Issue\CashInvoice.resx">
+      <DependentUpon>CashInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\Issue\CashInvoice_Smaller.resx">
+      <DependentUpon>CashInvoice_Smaller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\Issue\CreditInvoice.resx">
+      <DependentUpon>CreditInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\Issue\CreditInvoice_Smaller.resx">
+      <DependentUpon>CreditInvoice_Smaller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\Issue\DeliveryNoteForIssue.resx">
+      <DependentUpon>DeliveryNoteForIssue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\Issue\IssueOrderList.resx">
+      <DependentUpon>IssueOrderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\Issue\PickList.resx">
+      <DependentUpon>PickList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\Issue\PricedPickList.resx">
+      <DependentUpon>PricedPickList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\Issue\StoreTransferPrintOut.resx">
+      <DependentUpon>StoreTransferPrintOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\Issue\STVonA4.resx">
+      <DependentUpon>STVonA4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\Issue\STVonHeadedPaper.resx">
+      <DependentUpon>STVonHeadedPaper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\Issue\STVonNonHeadedPaper.resx">
+      <DependentUpon>STVonNonHeadedPaper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\Receive\GoodsReceivingNote.resx">
+      <DependentUpon>GoodsReceivingNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\Receive\ReceiptConfirmationPrintout.resx">
+      <DependentUpon>ReceiptConfirmationPrintout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\Receive\ReceiptConfirmationPrintoutStore.resx">
+      <DependentUpon>ReceiptConfirmationPrintoutStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\Receive\ReceiptConfirmationShortagePrintout.resx">
+      <DependentUpon>ReceiptConfirmationShortagePrintout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\Receive\ReceiptConfirmationShortagePrintoutStore.resx">
+      <DependentUpon>ReceiptConfirmationShortagePrintoutStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\Receive\SRMPrintout.resx">
+      <DependentUpon>SRMPrintout.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="HCMIS.Reports.Helpers.TheDataSet+CutOffNumberDataTable.datasource" />
+    <None Include="HCMIS.Reports.Helpers.TheDataSet+IssueDetailByFacilityDataTable.datasource" />
+    <None Include="HCMIS.Reports.Helpers.TheDataSet.datasource" />
+    <None Include="Helpers\DataSetY.xsc">
+      <DependentUpon>DataSetY.xsd</DependentUpon>
+    </None>
+    <None Include="Helpers\DataSetY.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetY.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Helpers\DataSetY.xss">
+      <DependentUpon>DataSetY.xsd</DependentUpon>
+    </None>
+    <None Include="Helpers\TheDataSet.xsc">
+      <DependentUpon>TheDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Helpers\TheDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TheDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Helpers\TheDataSet.xss">
+      <DependentUpon>TheDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\BLL\HCMIS.BLL.csproj">
+      <Project>{4d833455-e466-4e4f-ad03-352c114711e1}</Project>
+      <Name>HCMIS.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure\DAL\HCMIS.DAL.csproj">
+      <Project>{5b87b191-fbfe-4d36-827e-47e7251b3872}</Project>
+      <Name>HCMIS.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure\Shared\HCMIS.Shared.csproj">
+      <Project>{7a71311e-26df-477f-b5ec-c276f18ca8af}</Project>
+      <Name>HCMIS.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>echo/&gt;  $(ProjectDir)Properties\licenses.licx</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

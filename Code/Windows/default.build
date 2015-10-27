@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<project name="HCMIS Desktop" default="build" basedir=".">
+<target name="publish" >
+	<msbuild project="${base.dir}\Windows\Presentation\Desktop\Windows.Desktop.vbproj">
+		<arg value="/property:Configuration=Release"/>
+		<arg value="/p:ApplicationVersion=300"/>
+		<arg value="/t:publish" />
+	</msbuild>
+	<copy todir="C:\inetpub\wwwroot\deployment\HCMIS\${project.name}">
+		<fileset basedir=".">
+			<include name="publish.htm" />
+		</fileset>
+		<filterchain>
+			<replacetokens>
+				<token key="VERSION" value="${version.num}" />
+				<token key="APPNAME" value="${appname}" />
+			</replacetokens>
+		</filterchain>
+	</copy>
+</target>
+</project>
+

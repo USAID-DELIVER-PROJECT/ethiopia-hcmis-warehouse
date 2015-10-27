@@ -1,0 +1,53 @@
+using HCMIS.Extensions.Enums.Attributes;
+namespace HCMIS.Enums
+{
+    [CodeColumn("UserGroupCode")]
+    public enum UserGroups
+    {
+       [TableCode("ADM")] 
+        Administrator,
+       [TableCode("SA")] 
+        SystemAdministrator,
+       [TableCode("INV")] 
+        Invoicer,
+       [TableCode("PO")] 
+        PartnerOperator,
+       [TableCode("SDOD")] 
+        StockandDistributionOfficerwithDeletePrivilege,
+       [TableCode("TEMP")] 
+        TemporaryStore,
+       [TableCode("FORC")] 
+        Forecasting,
+       [TableCode("INVR")] 
+        InvoicerwithReprintPrivilege,
+       [TableCode("SDO")] 
+        StockandDistributionOfficer,
+       [TableCode("WM")] 
+        WarehouseManager,
+       [TableCode("FO")] 
+        FinanceOfficer,
+       [TableCode("ITO")] 
+        ITOfficer,
+       [TableCode("FM")] 
+        SeniorFinanceOfficer,
+       [TableCode("RO")] 
+        RequisitionOfficer,
+       [TableCode("SC")] 
+        StockCard,
+       [TableCode("BC")] 
+        BinCard,
+       [TableCode("PIT")] 
+        PFSAIT,
+       [TableCode("HPO")] 
+        HealthProgramOperator,
+       [TableCode("SCB")] 
+        StockCardandBinCard,
+       [TableCode("FADM")] 
+        FacilityAdministrator,
+       [TableCode("DISP")] 
+        Dispatcher,
+       [TableCode("CRO")] 
+        ColdRoomOperator,
+
+    }
+}

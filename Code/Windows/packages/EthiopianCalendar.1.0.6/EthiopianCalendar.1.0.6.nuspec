@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>EthiopianCalendar</id>
+    <version>1.0.6</version>
+    <title>Ethiopian Calendar</title>
+    <authors>Baakal</authors>
+    <owners>Baakal</owners>
+    <projectUrl>http://baakal.github.io/EthiopianCalendar</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>An Ethiopian Date Converter</description>
+    <language />
+  </metadata>
+</package>

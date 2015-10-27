@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DF635573-6130-453A-A897-F28B7712B5E7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HCMIS.Warehouse</RootNamespace>
+    <AssemblyName>HCMIS.Warehouse.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.SqlXml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\Commodity\ABC.cs" />
+    <Compile Include="Models\Account\Account.cs" />
+    <Compile Include="Models\Action.cs" />
+    <Compile Include="Models\Account\Activity.cs" />
+    <Compile Include="Models\AdministrativeUnit.cs" />
+    <Compile Include="Models\ApplicationVersion.cs" />
+    <Compile Include="Models\Audit.cs" />
+    <Compile Include="Models\Commodity\Category.cs" />
+    <Compile Include="Models\ChangeSetAnchor.cs" />
+    <Compile Include="Models\Cluster.cs" />
+    <Compile Include="Models\CommodityType.cs" />
+    <Compile Include="Models\CoreAccount.cs" />
+    <Compile Include="Models\CoreAccountCategory.cs" />
+    <Compile Include="Models\CostingMethod.cs" />
+    <Compile Include="Models\Currency.cs" />
+    <Compile Include="Models\CurrentPrice.cs" />
+    <Compile Include="Models\DemographicEstimate.cs" />
+    <Compile Include="Models\DemographicIndicator.cs" />
+    <Compile Include="Models\Department.cs" />
+    <Compile Include="Models\DirectoryUpdates.cs" />
+    <Compile Include="Models\DirectoryUpdateStatus.cs" />
+    <Compile Include="Models\Document.cs" />
+    <Compile Include="Models\DocumentReceipt.cs" />
+    <Compile Include="Models\DocumentType.cs" />
+    <Compile Include="Models\DosageForm.cs" />
+    <Compile Include="Models\ErrorCorrection.cs" />
+    <Compile Include="Models\ExportUtilityInventory.cs" />
+    <Compile Include="Models\ExportUtilityReceiptType.cs" />
+    <Compile Include="Models\Finance\ExpenseType.cs" />
+    <Compile Include="Models\Finance\InvoiceStatus.cs" />
+    <Compile Include="Models\Hub.cs" />
+    <Compile Include="Models\OtherAccount.cs" />
+    <Compile Include="Models\PurchaseOrderParentType.cs" />
+    <Compile Include="Models\PurchaseOrderType.cs" />
+    <Compile Include="Models\Queue.cs" />
+    <Compile Include="Models\ReceivingUnitHub.cs" />
+    <Compile Include="Models\SageAccount.cs" />
+    <Compile Include="Models\AccountsPayable.cs" />
+    <Compile Include="Models\AccountsReceivable.cs" />
+    <Compile Include="Models\CostOfSales.cs" />
+    <Compile Include="Models\FixedAccountType.cs" />
+    <Compile Include="Models\FacilityHub.cs" />
+    <Compile Include="Models\FiscalYear.cs" />
+    <Compile Include="Models\GeneralInfo.cs" />
+    <Compile Include="Models\Group.cs" />
+    <Compile Include="Models\GroupPermission.cs" />
+    <Compile Include="Models\HalfPalletLocation.cs" />
+    <Compile Include="Models\Indicator.cs" />
+    <Compile Include="Models\Institution.cs" />
+    <Compile Include="Models\InstitutionCatchmentArea.cs" />
+    <Compile Include="Models\InstitutionIType.cs" />
+    <Compile Include="Models\InstitutionParentType.cs" />
+    <Compile Include="Models\InstitutionType.cs" />
+    <Compile Include="Models\InternalTransfer.cs" />
+    <Compile Include="Models\Inventory.cs" />
+    <Compile Include="Models\InventoryPeriod.cs" />
+    <Compile Include="Models\InventoryStatus.cs" />
+    <Compile Include="Models\InvoiceType.cs" />
+    <Compile Include="Models\Issue.cs" />
+    <Compile Include="Models\IssueDoc.cs" />
+    <Compile Include="Models\IssueDocDeleted.cs" />
+    <Compile Include="Models\IssueDocInventory.cs" />
+    <Compile Include="Models\Commodity\Item.cs" />
+    <Compile Include="Models\Commodity\ItemActivity.cs" />
+    <Compile Include="Models\Commodity\ItemCategory.cs" />
+    <Compile Include="Models\Commodity\ItemInstitutionType.cs" />
+    <Compile Include="Models\Commodity\ItemManufacturer.cs" />
+    <Compile Include="Models\Commodity\ItemOwnershipType.cs" />
+    <Compile Include="Models\Commodity\ItemPrefferedLocation.cs" />
+    <Compile Include="Models\Commodity\ItemProgram.cs" />
+    <Compile Include="Models\Commodity\ItemStorageType.cs" />
+    <Compile Include="Models\Commodity\ItemSupplier.cs" />
+    <Compile Include="Models\Commodity\ItemSupplyCategory.cs" />
+    <Compile Include="Models\Commodity\ItemUnitBase.cs" />
+    <Compile Include="Models\JEvent.cs" />
+    <Compile Include="Models\JEventCoreAccount.cs" />
+    <Compile Include="Models\JobTitle.cs" />
+    <Compile Include="Models\JournalLite.cs" />
+    <Compile Include="Models\JTransaction.cs" />
+    <Compile Include="Models\JTransactionGroup.cs" />
+    <Compile Include="Models\Ledger.cs" />
+    <Compile Include="Models\LedgerLite.cs" />
+    <Compile Include="Models\Log.cs" />
+    <Compile Include="Models\LogActivity.cs" />
+    <Compile Include="Models\LogAppError.cs" />
+    <Compile Include="Models\LogAudit.cs" />
+    <Compile Include="Models\LogChangeSet.cs" />
+    <Compile Include="Models\LogError.cs" />
+    <Compile Include="Models\LogFinance.cs" />
+    <Compile Include="Models\LogLogin.cs" />
+    <Compile Include="Models\LogPrint.cs" />
+    <Compile Include="Models\LogProfile.cs" />
+    <Compile Include="Models\LogReceiptChange.cs" />
+    <Compile Include="Models\LogReceiptStatus.cs" />
+    <Compile Include="Models\LogRequisitionEvents.cs" />
+    <Compile Include="Models\LogSession.cs" />
+    <Compile Include="Models\LossAndAdjustment.cs" />
+    <Compile Include="Models\LossAndAdjustmentReason.cs" />
+    <Compile Include="Models\Manufacturer.cs" />
+    <Compile Include="Models\MenuItem.cs" />
+    <Compile Include="Models\MenuItemGroup.cs" />
+    <Compile Include="Models\Account\Mode.cs" />
+    <Compile Include="Models\ModePaymentType.cs" />
+    <Compile Include="Models\Account\MovingAverageGroup.cs" />
+    <Compile Include="Models\MovingAverageHistory.cs" />
+    <Compile Include="Models\Operation.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderDetail.cs" />
+    <Compile Include="Models\OrderStatus.cs" />
+    <Compile Include="Models\OrderType.cs" />
+    <Compile Include="Models\OwnershipType.cs" />
+    <Compile Include="Models\Pallet.cs" />
+    <Compile Include="Models\PalletLocation.cs" />
+    <Compile Include="Models\PaymentTerm.cs" />
+    <Compile Include="Models\PaymentType.cs" />
+    <Compile Include="Models\PharmaceuticalClassification.cs" />
+    <Compile Include="Models\PhysicalStore.cs" />
+    <Compile Include="Models\PickFace.cs" />
+    <Compile Include="Models\PickList.cs" />
+    <Compile Include="Models\PickListDetail.cs" />
+    <Compile Include="Models\PO.cs" />
+    <Compile Include="Models\Population.cs" />
+    <Compile Include="Models\PriceChangeType.cs" />
+    <Compile Include="Models\PrintQueue.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductOwnershipType.cs" />
+    <Compile Include="Models\ProductReceivingUnitType.cs" />
+    <Compile Include="Models\Program.cs" />
+    <Compile Include="Models\RackStatus.cs" />
+    <Compile Include="Models\Receipt.cs" />
+    <Compile Include="Models\ReceiptConfirmationPrintout.cs" />
+    <Compile Include="Models\ReceiptConfirmationStatus.cs" />
+    <Compile Include="Models\ReceiptInvoice.cs" />
+    <Compile Include="Models\ReceiptType.cs" />
+    <Compile Include="Models\ReceiveDoc.cs" />
+    <Compile Include="Models\ReceiveDocConfirmation.cs" />
+    <Compile Include="Models\ReceiveDocDeleted.cs" />
+    <Compile Include="Models\ReceiveDocShortage.cs" />
+    <Compile Include="Models\ReceivePallet.cs" />
+    <Compile Include="Models\ReceivePriceConfirmation.cs" />
+    <Compile Include="Models\Region.cs" />
+    <Compile Include="Models\ReportPrintout.cs" />
+    <Compile Include="Models\Requisition.cs" />
+    <Compile Include="Models\RequisitionPriority.cs" />
+    <Compile Include="Models\RequisitionStatus.cs" />
+    <Compile Include="Models\RequisitionType.cs" />
+    <Compile Include="Models\RequistionDetail.cs" />
+    <Compile Include="Models\ResourceType.cs" />
+    <Compile Include="Models\Route.cs" />
+    <Compile Include="Models\RRF.cs" />
+    <Compile Include="Models\RRFDetail.cs" />
+    <Compile Include="Models\Sales.cs" />
+    <Compile Include="Models\SchemaVersion.cs" />
+    <Compile Include="Models\Sequence.cs" />
+    <Compile Include="Models\SettingCategory.cs" />
+    <Compile Include="Models\Shelf.cs" />
+    <Compile Include="Models\ShelfRowColumn.cs" />
+    <Compile Include="Models\ShortageReasons.cs" />
+    <Compile Include="Models\SoftwareSettings.cs" />
+    <Compile Include="Models\StorageType.cs" />
+    <Compile Include="Models\Account\SubAccount.cs" />
+    <Compile Include="Models\Commodity\SubCategory.cs" />
+    <Compile Include="Models\Supplier.cs" />
+    <Compile Include="Models\SupplierType.cs" />
+    <Compile Include="Models\SupplyCategory.cs" />
+    <Compile Include="Models\Transfer.cs" />
+    <Compile Include="Models\TransferType.cs" />
+    <Compile Include="Models\UnitOfIssue.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserActivity.cs" />
+    <Compile Include="Models\UserAdministrativeUnit.cs" />
+    <Compile Include="Models\UserGroup.cs" />
+    <Compile Include="Models\UserInstitution.cs" />
+    <Compile Include="Models\UserPaymentType.cs" />
+    <Compile Include="Models\UserPhysicalStore.cs" />
+    <Compile Include="Models\UserType.cs" />
+    <Compile Include="Models\Commodity\VEN.cs" />
+    <Compile Include="Models\Commodity\VolumeMetrics.cs" />
+    <Compile Include="Models\Warehouse.cs" />
+    <Compile Include="Models\Woreda.cs" />
+    <Compile Include="Models\YearEnd.cs" />
+    <Compile Include="Models\Zone.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TimeDescriptor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Warehouse.Models.nuspec" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

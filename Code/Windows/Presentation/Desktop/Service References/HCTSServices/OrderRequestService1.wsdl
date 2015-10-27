@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://hcts.org.et/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://hcts.org.et/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://hcts.org.et/">
+      <s:element name="GetOrderRequestCount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="hubID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderRequestCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetOrderRequestCountResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderRequests">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="hubID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderRequestsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOrderRequestsResult" type="tns:OrderRequests" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="OrderRequests">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ServerTimeAtRequest" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListOfOrderRequests" type="tns:ArrayOfOrderRequest" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfOrderRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="OrderRequest" nillable="true" type="tns:OrderRequest" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OrderRequest">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="OrderRequestID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FacilityID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListOfOrderRequestDetail" type="tns:ArrayOfOrderRequestDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfOrderRequestDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="OrderRequestDetail" nillable="true" type="tns:OrderRequestDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OrderRequestDetail">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="OrderRequestDetailID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ItemID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AmountToIssue" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ConfirmOrderRequests">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="input" type="tns:ConfirmOrderRequestInput" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ConfirmOrderRequestInput">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="HubID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListOfOrderIDsToConfirm" type="tns:ArrayOfInt" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ConfirmOrderRequestsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ConfirmOrderRequestsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IssueOrders">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="input" type="tns:OrdersIssuedInput" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="OrdersIssuedInput">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="HubID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListOfOrdersIssued" type="tns:ArrayOfOrderIssued" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfOrderIssued">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="OrderIssued" nillable="true" type="tns:OrderIssued" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OrderIssued">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="OrderID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FacilityID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="OrderDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListOfOrdersIssuedDetail" type="tns:ArrayOfOrderIssuedDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfOrderIssuedDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="OrderIssuedDetail" nillable="true" type="tns:OrderIssuedDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OrderIssuedDetail">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ItemID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AmountRequested" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AmountIssued" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="IssueOrdersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IssueOrdersResult" type="tns:ConfirmOrdersIssuedOutput" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ConfirmOrdersIssuedOutput">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="HubID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListOfConfirmedOrderIDs" type="tns:ArrayOfInt" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="NonStandardIssue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="input" type="tns:OrdersIssuedInput" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NonStandardIssueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NonStandardIssueResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetOrderRequestCountSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOrderRequestCount" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderRequestCountSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOrderRequestCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderRequestsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOrderRequests" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderRequestsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOrderRequestsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmOrderRequestsSoapIn">
+    <wsdl:part name="parameters" element="tns:ConfirmOrderRequests" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmOrderRequestsSoapOut">
+    <wsdl:part name="parameters" element="tns:ConfirmOrderRequestsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IssueOrdersSoapIn">
+    <wsdl:part name="parameters" element="tns:IssueOrders" />
+  </wsdl:message>
+  <wsdl:message name="IssueOrdersSoapOut">
+    <wsdl:part name="parameters" element="tns:IssueOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="NonStandardIssueSoapIn">
+    <wsdl:part name="parameters" element="tns:NonStandardIssue" />
+  </wsdl:message>
+  <wsdl:message name="NonStandardIssueSoapOut">
+    <wsdl:part name="parameters" element="tns:NonStandardIssueResponse" />
+  </wsdl:message>
+  <wsdl:portType name="OrderRequestServiceSoap">
+    <wsdl:operation name="GetOrderRequestCount">
+      <wsdl:input message="tns:GetOrderRequestCountSoapIn" />
+      <wsdl:output message="tns:GetOrderRequestCountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderRequests">
+      <wsdl:input message="tns:GetOrderRequestsSoapIn" />
+      <wsdl:output message="tns:GetOrderRequestsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmOrderRequests">
+      <wsdl:input message="tns:ConfirmOrderRequestsSoapIn" />
+      <wsdl:output message="tns:ConfirmOrderRequestsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IssueOrders">
+      <wsdl:input message="tns:IssueOrdersSoapIn" />
+      <wsdl:output message="tns:IssueOrdersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NonStandardIssue">
+      <wsdl:input message="tns:NonStandardIssueSoapIn" />
+      <wsdl:output message="tns:NonStandardIssueSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OrderRequestServiceSoap" type="tns:OrderRequestServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetOrderRequestCount">
+      <soap:operation soapAction="http://hcts.org.et/GetOrderRequestCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderRequests">
+      <soap:operation soapAction="http://hcts.org.et/GetOrderRequests" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmOrderRequests">
+      <soap:operation soapAction="http://hcts.org.et/ConfirmOrderRequests" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IssueOrders">
+      <soap:operation soapAction="http://hcts.org.et/IssueOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NonStandardIssue">
+      <soap:operation soapAction="http://hcts.org.et/NonStandardIssue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="OrderRequestServiceSoap12" type="tns:OrderRequestServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetOrderRequestCount">
+      <soap12:operation soapAction="http://hcts.org.et/GetOrderRequestCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderRequests">
+      <soap12:operation soapAction="http://hcts.org.et/GetOrderRequests" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmOrderRequests">
+      <soap12:operation soapAction="http://hcts.org.et/ConfirmOrderRequests" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IssueOrders">
+      <soap12:operation soapAction="http://hcts.org.et/IssueOrders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NonStandardIssue">
+      <soap12:operation soapAction="http://hcts.org.et/NonStandardIssue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OrderRequestService">
+    <wsdl:port name="OrderRequestServiceSoap" binding="tns:OrderRequestServiceSoap">
+      <soap:address location="http://10.0.1.3/HCTSWebServices/OrderRequestService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="OrderRequestServiceSoap12" binding="tns:OrderRequestServiceSoap12">
+      <soap12:address location="http://10.0.1.3/HCTSWebServices/OrderRequestService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

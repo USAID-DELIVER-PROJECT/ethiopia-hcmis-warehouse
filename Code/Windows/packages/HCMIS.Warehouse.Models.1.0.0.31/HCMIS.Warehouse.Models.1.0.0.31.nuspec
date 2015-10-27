@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>HCMIS.Warehouse.Models</id>
+    <version>1.0.0.31</version>
+    <title>HCMIS.Warehouse.Models</title>
+    <authors>Eyassu, Yonas</authors>
+    <owners>Eyassu, Yonas</owners>
+    <projectUrl>https://github.com/JSIDELIVERETH/HCMIS-DevComponents</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>HCMIS.Models shared to all project</description>
+    <summary>HCMIS.Models shared to all project</summary>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright 2014</copyright>
+    <tags>HCMIS Models shared</tags>
+    <dependencies>
+      <dependency id="EntityFramework" version="5.0.0" />
+    </dependencies>
+    <references>
+      <reference file="HCMIS.Warehouse.Models.dll" />
+    </references>
+  </metadata>
+</package>

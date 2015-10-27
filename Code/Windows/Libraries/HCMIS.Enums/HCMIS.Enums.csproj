@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B7BFBC4A-9709-4A01-A2C9-4E903EE9DB0D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HCMIS.Enums</RootNamespace>
+    <AssemblyName>HCMIS.Enums</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ABCs.cs" />
+    <Compile Include="Accounts.cs" />
+    <Compile Include="Actions.cs" />
+    <Compile Include="Activities.cs" />
+    <Compile Include="AdministrativeUnitTypes.cs" />
+    <Compile Include="ClinicalServices.cs" />
+    <Compile Include="CommodityTypes.cs" />
+    <Compile Include="CoreAccountCategories.cs" />
+    <Compile Include="CostingMethods.cs" />
+    <Compile Include="Currencies.cs" />
+    <Compile Include="DemographicIndicators.cs" />
+    <Compile Include="Departments.cs" />
+    <Compile Include="DocumentTypes.cs" />
+    <Compile Include="ExpenseType.cs" />
+    <Compile Include="ExReceiptTypes.cs" />
+    <Compile Include="FixedAccountTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Groups.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="InstitutionITypes.cs" />
+    <Compile Include="InstitutionParentTypes.cs" />
+    <Compile Include="InstitutionTypes.cs" />
+    <Compile Include="InventoryStatus.cs" />
+    <Compile Include="InvoiceStatus.cs" />
+    <Compile Include="InvoiceTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="JobTitles.cs" />
+    <Compile Include="LossAndAdjustmentReasons.cs" />
+    <Compile Include="LossOrAdjustmentTypes.cs" />
+    <Compile Include="Modes.cs" />
+    <Compile Include="MovingAverageGroups.cs" />
+    <Compile Include="OrderStatus.cs" />
+    <Compile Include="OrderSubTypes.cs" />
+    <Compile Include="OrderTypes.cs" />
+    <Compile Include="OwnershipTypes.cs" />
+    <Compile Include="Packages.cs" />
+    <Compile Include="PaymentTerms.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PaymentTypes.cs" />
+    <Compile Include="PriceChangeTypes.cs" />
+    <Compile Include="Programs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseOrderParentTypes.cs" />
+    <Compile Include="PurchaseOrderTypes.cs" />
+    <Compile Include="ReceiptConfirmationStatus.cs" />
+    <Compile Include="ReceiptTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportingGroups.cs" />
+    <Compile Include="ReportTypess.cs" />
+    <Compile Include="RequisitionPriorities.cs" />
+    <Compile Include="RequisitionPrioritys.cs" />
+    <Compile Include="RequisitionStatus.cs" />
+    <Compile Include="RequisitionTypes.cs" />
+    <Compile Include="ShortageReasons.cs" />
+    <Compile Include="Sites.cs" />
+    <Compile Include="SoftwareSettingCategories.cs" />
+    <Compile Include="SoftwareSettings.cs" />
+    <Compile Include="StockOutReasons.cs" />
+    <Compile Include="StorageTypes.cs" />
+    <Compile Include="SupplierTypes.cs" />
+    <Compile Include="TransferTypes.cs" />
+    <Compile Include="UserAccountTypes.cs" />
+    <Compile Include="UserGroups.cs" />
+    <Compile Include="VENs.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HCMIS.Extensions\HCMIS.Extensions.csproj">
+      <Project>{43a9733e-5a20-4282-9cc2-9f25ac50e7fe}</Project>
+      <Name>HCMIS.Extensions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

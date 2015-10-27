@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>HCMIS.Desktop</id>
+    <title>HCMIS Warehouse</title>
+    <version>1.0.0</version>
+    <authors>USAID DELIVER Project</authors>
+    <owners>USAID DELIVER Project</owners>
+    <licenseUrl>http://jsi.com</licenseUrl>
+    <projectUrl>http://hcmis.org</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>HCMIS Warehouse</description>
+    <releaseNotes>This release contains the following changes...</releaseNotes>
+  </metadata>
+</package>

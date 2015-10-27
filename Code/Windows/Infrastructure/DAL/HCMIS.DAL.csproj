@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5B87B191-FBFE-4D36-827E-47E7251B3872}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DAL</RootNamespace>
+    <AssemblyName>DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <DocumentationFile>
+    </DocumentationFile>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MyGeneration.dOOdads, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Presentation\Desktop\Common DLLs\MyGeneration.dOOdads.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="_ABC.cs" />
+    <Compile Include="_Account.cs" />
+    <Compile Include="_Activity.cs" />
+    <Compile Include="_Audit.cs" />
+    <Compile Include="_Category.cs" />
+    <Compile Include="_Cluster.cs" />
+    <Compile Include="_CommodityType.cs" />
+    <Compile Include="_Department.cs" />
+    <Compile Include="_DirectoryUpdates.cs" />
+    <Compile Include="_DirectoryUpdateStatus.cs" />
+    <Compile Include="_Document.cs" />
+    <Compile Include="_DocumentType.cs" />
+    <Compile Include="_DosageForm.cs" />
+    <Compile Include="_ErrorCorrection.cs" />
+    <Compile Include="_FiscalYear.cs" />
+    <Compile Include="_GeneralInfo.cs" />
+    <Compile Include="_Group.cs" />
+    <Compile Include="_GroupPermission.cs" />
+    <Compile Include="_HalfPalletLocation.cs" />
+    <Compile Include="_Hub.cs" />
+    <Compile Include="_Institution.cs" />
+    <Compile Include="_InstitutionIType.cs" />
+    <Compile Include="_InstitutionType.cs" />
+    <Compile Include="_InternalTransfer.cs" />
+    <Compile Include="_Inventory.cs" />
+    <Compile Include="_InventoryPeriod.cs" />
+    <Compile Include="_InventoryStatus.cs" />
+    <Compile Include="_InvoiceType.cs" />
+    <Compile Include="_Issue.cs" />
+    <Compile Include="_IssueDoc.cs" />
+    <Compile Include="_IssueDocDeleted.cs" />
+    <Compile Include="_IssueDocInventory.cs" />
+    <Compile Include="_Item.cs" />
+    <Compile Include="_ItemActivity.cs" />
+    <Compile Include="_ItemCategory.cs" />
+    <Compile Include="_ItemManufacturer.cs" />
+    <Compile Include="_ItemOwnershipType.cs" />
+    <Compile Include="_ItemPrefferedLocation.cs" />
+    <Compile Include="_ItemProgram.cs" />
+    <Compile Include="_ItemReceivingUnitType.cs" />
+    <Compile Include="_ItemSupplier.cs" />
+    <Compile Include="_ItemSupplyCategory.cs" />
+    <Compile Include="_ItemUnit.cs" />
+    <Compile Include="_ItemUnitBase.cs" />
+    <Compile Include="_JobTitle.cs" />
+    <Compile Include="_JournalLite.cs" />
+    <Compile Include="_LedgerLite.cs" />
+    <Compile Include="_Log.cs" />
+    <Compile Include="_LogActivity.cs" />
+    <Compile Include="_LogAppError.cs" />
+    <Compile Include="_LogAudit.cs" />
+    <Compile Include="_LogChangeSet.cs" />
+    <Compile Include="_LogError.cs" />
+    <Compile Include="_LogFinance.cs" />
+    <Compile Include="_LogLogin.cs" />
+    <Compile Include="_LogPrint.cs" />
+    <Compile Include="_LogProfile.cs" />
+    <Compile Include="_LogReceiptChange.cs" />
+    <Compile Include="_LogReceiptStatus.cs" />
+    <Compile Include="_LogRequisitionEvents.cs" />
+    <Compile Include="_LogRequisitionStatus.cs" />
+    <Compile Include="_LogSession.cs" />
+    <Compile Include="_LossAndAdjustment.cs" />
+    <Compile Include="_LossAndAdjustmentReason.cs" />
+    <Compile Include="_Manufacturer.cs" />
+    <Compile Include="_MenuItem.cs" />
+    <Compile Include="_MenuItemGroup.cs" />
+    <Compile Include="_Mode.cs" />
+    <Compile Include="_MovingAverageGroup.cs" />
+    <Compile Include="_MovingAverageHistory.cs" />
+    <Compile Include="_Operation.cs" />
+    <Compile Include="_Order.cs" />
+    <Compile Include="_OrderDetail.cs" />
+    <Compile Include="_OrderStatus.cs" />
+    <Compile Include="_OrderType.cs" />
+    <Compile Include="_OwnershipType.cs" />
+    <Compile Include="_Pallet.cs" />
+    <Compile Include="_PalletLocation.cs" />
+    <Compile Include="_PaymentTerm.cs" />
+    <Compile Include="_PaymentType.cs" />
+    <Compile Include="_Period.cs" />
+    <Compile Include="_PhysicalStore.cs" />
+    <Compile Include="_PickFace.cs" />
+    <Compile Include="_PickList.cs" />
+    <Compile Include="_PickListDetail.cs" />
+    <Compile Include="_PickListDetailDeleted.cs" />
+    <Compile Include="_PO.cs" />
+    <Compile Include="_Product.cs" />
+    <Compile Include="_ProductOwnershipType.cs" />
+    <Compile Include="_ProductReceivingUnitType.cs" />
+    <Compile Include="_Program.cs" />
+    <Compile Include="_PurchaseOrderDetail.cs" />
+    <Compile Include="_PurchaseOrderStatus.cs" />
+    <Compile Include="_PurchaseOrderType.cs" />
+    <Compile Include="_Queue.cs" />
+    <Compile Include="_RackStatus.cs" />
+    <Compile Include="_Receipt.cs" />
+    <Compile Include="_ReceiptConfirmationPrintout.cs" />
+    <Compile Include="_ReceiptConfirmationStatus.cs" />
+    <Compile Include="_ReceiptDocument.cs" />
+    <Compile Include="_ReceiptInvoice.cs" />
+    <Compile Include="_ReceiptInvoiceDetail.cs" />
+    <Compile Include="_ReceiptType.cs" />
+    <Compile Include="_ReceiveDoc.cs" />
+    <Compile Include="_ReceiveDocConfirmation.cs" />
+    <Compile Include="_ReceiveDocDeleted.cs" />
+    <Compile Include="_ReceiveDocShortage.cs" />
+    <Compile Include="_ReceivePallet.cs" />
+    <Compile Include="_ReceivePriceConfirmation.cs" />
+    <Compile Include="_ReceivingUnitHub.cs" />
+    <Compile Include="_Region.cs" />
+    <Compile Include="_ReportPrintout.cs" />
+    <Compile Include="_Request.cs" />
+    <Compile Include="_RequestDetail.cs" />
+    <Compile Include="_Requisition.cs" />
+    <Compile Include="_RequisitionPriority.cs" />
+    <Compile Include="_RequisitionStatus.cs" />
+    <Compile Include="_RequisitionType.cs" />
+    <Compile Include="_RequistionDetail.cs" />
+    <Compile Include="_ResourceType.cs" />
+    <Compile Include="_Route.cs" />
+    <Compile Include="_RRF.cs" />
+    <Compile Include="_RRFDetail.cs" />
+    <Compile Include="_Shelf.cs" />
+    <Compile Include="_ShelfRowColumn.cs" />
+    <Compile Include="_ShippingContainerType.cs" />
+    <Compile Include="_ShortageReasons.cs" />
+    <Compile Include="_SoftwareSettings.cs" />
+    <Compile Include="_StorageType.cs" />
+    <Compile Include="_SubAccount.cs" />
+    <Compile Include="_SubCategory.cs" />
+    <Compile Include="_Supplier.cs" />
+    <Compile Include="_SupplierType.cs" />
+    <Compile Include="_SupplyCategory.cs" />
+    <Compile Include="_Transfer.cs" />
+    <Compile Include="_TransferType.cs" />
+    <Compile Include="_User.cs" />
+    <Compile Include="_UserActivity.cs" />
+    <Compile Include="_UserGroup.cs" />
+    <Compile Include="_UserPaymentType.cs" />
+    <Compile Include="_UserPhysicalStore.cs" />
+    <Compile Include="_UserType.cs" />
+    <Compile Include="_VEN.cs" />
+    <Compile Include="_VolumeMetrics.cs" />
+    <Compile Include="_Warehouse.cs" />
+    <Compile Include="_Woreda.cs" />
+    <Compile Include="_YearEnd.cs" />
+    <Compile Include="_Zone.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

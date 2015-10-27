@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <authors>Eyassu,Yonas</authors>
+    <title>$title$</title>
+    <owners>USAID Deliver Project|Ethiopia</owners>
+    <projectUrl>https://github.com/JSIDELIVERETH/HCMIS-DevComponents</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>HCMIS.Models shared to all project</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright 2014</copyright>
+    <tags> HCMIS Models shared</tags>
+    <!--<dependencies>
+     <dependency id="EntityFramework" version="6.0.1" />
+    </dependencies>-->
+  </metadata>
+</package>

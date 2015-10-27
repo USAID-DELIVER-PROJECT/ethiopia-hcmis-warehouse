@@ -1,0 +1,544 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FE2522AA-62F1-42D4-80A7-86DC7F44E029}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HCMIS.Security.UserManagement</RootNamespace>
+    <AssemblyName>User Management</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>http://he.hcmisonline.org/user-managment/</UpdateUrl>
+    <ProductName>User Management</ProductName>
+    <PublisherName>HCMIS</PublisherName>
+    <SuiteName>User Management</SuiteName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>default.htm</WebPage>
+    <ApplicationRevision>24</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>774D2CC2E83763BD736DEB0719B6476BA352E473</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>HCMIS.UserManagement_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DXperience 12.1\Bin\Framework\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helpers\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Helpers\DirtyUserHelper.cs" />
+    <Compile Include="Helpers\FormIdentifierAttribute.cs" />
+    <Compile Include="Helpers\PanelHelper.cs" />
+    <Compile Include="Helpers\SecurityHelper.cs" />
+    <Compile Include="Helpers\ViewHelper.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Consolidate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Consolidate.Designer.cs">
+      <DependentUpon>Consolidate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DepartmentsLookUpView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DepartmentsLookUpView.Designer.cs">
+      <DependentUpon>DepartmentsLookUpView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GroupView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\GroupView.Designer.cs">
+      <DependentUpon>GroupView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\JobTitlesLookupView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\JobTitlesLookupView.Designer.cs">
+      <DependentUpon>JobTitlesLookupView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuItemsLookupView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuItemsLookupView.Designer.cs">
+      <DependentUpon>MenuItemsLookupView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuItemsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuItemsView.Designer.cs">
+      <DependentUpon>MenuItemsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OperationsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\OperationsView.Designer.cs">
+      <DependentUpon>OperationsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ResourceTypesView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ResourceTypesView.Designer.cs">
+      <DependentUpon>ResourceTypesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewHelper.cs" />
+    <Compile Include="ViewModels\AccountListViewModel.cs" />
+    <Compile Include="ViewModels\GroupPermissionListViewMode.cs" />
+    <Compile Include="ViewModels\GroupsListViewModel.cs" />
+    <Compile Include="ViewModels\MenuListViewModel.cs" />
+    <Compile Include="ViewModels\MenuViewModel.cs" />
+    <Compile Include="ViewModels\PermissionListViewModel.cs" />
+    <Compile Include="ViewModels\StoreListViewModel.cs" />
+    <Compile Include="ViewModels\UserListViewModel.cs" />
+    <Compile Include="ViewModels\UserViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="Views\ChangePasswordView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ChangePasswordView.designer.cs">
+      <DependentUpon>ChangePasswordView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateUserView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CreateUserView.designer.cs">
+      <DependentUpon>CreateUserView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LogIn.designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuGroupView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuGroupView.Designer.cs">
+      <DependentUpon>MenuGroupView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddAccount.Designer.cs">
+      <DependentUpon>AddAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GroupPermission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\GroupPermission.Designer.cs">
+      <DependentUpon>GroupPermission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddGroup.Designer.cs">
+      <DependentUpon>AddGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PermissionView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PermissionView.Designer.cs">
+      <DependentUpon>PermissionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddStore.Designer.cs">
+      <DependentUpon>AddStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SetPasswordView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SetPasswordView.designer.cs">
+      <DependentUpon>SetPasswordView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UserDetail.Designer.cs">
+      <DependentUpon>UserDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UsersListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UsersListView.designer.cs">
+      <DependentUpon>UsersListView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Helpers\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\Consolidate.resx">
+      <DependentUpon>Consolidate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DepartmentsLookUpView.resx">
+      <DependentUpon>DepartmentsLookUpView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\GroupView.resx">
+      <DependentUpon>GroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\JobTitlesLookupView.resx">
+      <DependentUpon>JobTitlesLookupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MenuItemsLookupView.resx">
+      <DependentUpon>MenuItemsLookupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MenuItemsView.resx">
+      <DependentUpon>MenuItemsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OperationsView.resx">
+      <DependentUpon>OperationsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ResourceTypesView.resx">
+      <DependentUpon>ResourceTypesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ChangePasswordView.resx">
+      <DependentUpon>ChangePasswordView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CreateUserView.resx">
+      <DependentUpon>CreateUserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MenuGroupView.resx">
+      <DependentUpon>MenuGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddAccount.resx">
+      <DependentUpon>AddAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\GroupPermission.resx">
+      <DependentUpon>GroupPermission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddGroup.resx">
+      <DependentUpon>AddGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PermissionView.resx">
+      <DependentUpon>PermissionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddStore.resx">
+      <DependentUpon>AddStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SetPasswordView.resx">
+      <DependentUpon>SetPasswordView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserDetail.resx">
+      <DependentUpon>UserDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UsersListView.resx">
+      <DependentUpon>UsersListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="HCMIS.UserManagement_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\HCMIS.Security.Models.Account.datasource" />
+    <None Include="Properties\DataSources\HCMIS.Security.Models.AccountUser.datasource" />
+    <None Include="Properties\DataSources\HCMIS.Security.Models.Department.datasource" />
+    <None Include="Properties\DataSources\HCMIS.Security.Models.Group.datasource" />
+    <None Include="Properties\DataSources\HCMIS.Security.Models.GroupPermission.datasource" />
+    <None Include="Properties\DataSources\HCMIS.Security.Models.JobTitle.datasource" />
+    <None Include="Properties\DataSources\HCMIS.Security.Models.MenuItem.datasource" />
+    <None Include="Properties\DataSources\HCMIS.Security.Models.MenuItemGroup.datasource" />
+    <None Include="Properties\DataSources\HCMIS.Security.Models.Operation.datasource" />
+    <None Include="Properties\DataSources\HCMIS.Security.Models.Permission.datasource" />
+    <None Include="Properties\DataSources\HCMIS.Security.Models.ResourceType.datasource" />
+    <None Include="Properties\DataSources\HCMIS.Security.Models.Store.datasource" />
+    <None Include="Properties\DataSources\HCMIS.Security.Models.StoreUser.datasource" />
+    <None Include="Properties\DataSources\HCMIS.Security.Models.User.datasource" />
+    <None Include="Properties\DataSources\HCMIS.Security.Models.UserAccount.datasource" />
+    <None Include="Properties\DataSources\HCMIS.Security.Models.UserGroup.datasource" />
+    <None Include="Properties\DataSources\HCMIS.Security.UserManagement.ViewModels.AccountListViewMode.datasource" />
+    <None Include="Properties\DataSources\HCMIS.Security.UserManagement.ViewModels.MenuViewModel.datasource" />
+    <None Include="Properties\DataSources\HCMIS.Security.UserManagement.ViewModels.PermissionListViewModel.datasource" />
+    <None Include="Properties\DataSources\HCMIS.Security.UserManagement.ViewModels.UserViewModel.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\HCMIS.Logging\HCMIS.Logging.csproj">
+      <Project>{8DB7D300-436F-4089-849B-717A39E64199}</Project>
+      <Name>HCMIS.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\HCMIS.Security.Common\HCMIS.Security.Common.csproj">
+      <Project>{9b7aaa15-62ee-4d72-a917-e7f119be001f}</Project>
+      <Name>HCMIS.Security.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\HCMIS.Security\HCMIS.Security.csproj">
+      <Project>{700d59a9-0658-466d-938c-95a471451629}</Project>
+      <Name>HCMIS.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\Shared\HCMIS.Shared.csproj">
+      <Project>{7A71311E-26DF-477F-B5EC-C276F18CA8AF}</Project>
+      <Name>HCMIS.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddFile_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddFile_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddFolder_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddFolder_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddToAlbum_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddToAlbum_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddToLibrary_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddToLibrary_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddItem_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddItem_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddNewTab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddGroup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Address.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddSort.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forward_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserKey_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserKey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserKey_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\View_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CloseButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Demo_Audit_Settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Applications.png" />
+    <Content Include="Resources\ChangePassword.png" />
+    <Content Include="Resources\Department.png" />
+    <Content Include="Resources\GroupPermission.png" />
+    <None Include="Resources\Login-Background.png" />
+    <None Include="Resources\JobTitles.png" />
+    <Content Include="Resources\Logout.png" />
+    <Content Include="Resources\LookUps.png" />
+    <Content Include="Resources\MenuItems.png" />
+    <Content Include="Resources\MyAccount.png" />
+    <Content Include="Resources\ResourceTypes.png" />
+    <Content Include="Resources\User.png" />
+    <Content Include="Resources\UserGroups.png" />
+    <Content Include="Resources\UsersAndGroups.png" />
+    <Content Include="Resources\Users_Groups.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>echo/&gt;  $(ProjectDir)Properties\licenses.licx</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

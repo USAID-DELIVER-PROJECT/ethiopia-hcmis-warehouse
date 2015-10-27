@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4D833455-E466-4E4F-AD03-352C114711E1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BLL</RootNamespace>
+    <AssemblyName>BLL</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <LangVersion>default</LangVersion>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EthiopianDate">
+      <HintPath>..\..\Presentation\Desktop\Common DLLs\EthiopianDate.dll</HintPath>
+    </Reference>
+    <Reference Include="MyGeneration.dOOdads">
+      <HintPath>..\..\Presentation\Desktop\Common DLLs\MyGeneration.dOOdads.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CurrentContext.cs" />
+    <Compile Include="Finance\CostingService.cs" />
+    <Compile Include="Helpers\DateTimeHelper.cs" />
+    <Compile Include="Helpers\ReceiveDocConstraintHelper.cs" />
+    <Compile Include="Models\ABC.cs" />
+    <Compile Include="Models\Balance.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Logs\ChangeLog.cs" />
+    <Compile Include="Location\Cluster.cs" />
+    <Compile Include="Finance\AverageCostCalculator.cs" />
+    <Compile Include="Finance\CenterCostCalculator.cs" />
+    <Compile Include="Finance\CostBuildup.cs" />
+    <Compile Include="Finance\CostElement.cs" />
+    <Compile Include="Helpers\DirectoryUpdates.cs" />
+    <Compile Include="Logs\LogError.cs" />
+    <Compile Include="Finance\CostCalculator.cs" />
+    <Compile Include="Finance\ICostCalculator.cs" />
+    <Compile Include="Finance\JournalEntry.cs" />
+    <Compile Include="Models\FiscalYear.cs" />
+    <Compile Include="Models\InstitutionIType.cs" />
+    <Compile Include="Models\ItemUnitBase.cs" />
+    <Compile Include="Models\MovingAverageGroup.cs" />
+    <Compile Include="Models\Period.cs" />
+    <Compile Include="Models\Request.cs" />
+    <Compile Include="Models\RequestDetail.cs" />
+    <Compile Include="Models\ShippingContainerType.cs" />
+    <Compile Include="Models\SqlClient.cs" />
+    <Compile Include="Models\PurchaseOrderDetail.cs" />
+    <Compile Include="Models\RRF.cs" />
+    <Compile Include="Models\RRFDetail.cs" />
+    <Compile Include="Models\Document.cs" />
+    <Compile Include="Models\DocumentType.cs" />
+    <Compile Include="Models\ReceiptDocument.cs" />
+    <Compile Include="Models\StockAvailabilityStatistics.cs" />
+    <Compile Include="Models\VolumeMetrics.cs" />
+    <Compile Include="Models\InvoiceType.cs" />
+    <Compile Include="Services\IssueService.cs" />
+    <Compile Include="Services\ReceiveService.cs" />
+    <Compile Include="Services\TransferService.cs" />
+    <Compile Include="WorkFlow\Activities\ErrorCorrection.cs" />
+    <Compile Include="WorkFlow\Activities\Inventory.cs" />
+    <Compile Include="WorkFlow\Activities\InventoryPeriod.cs" />
+    <Compile Include="WorkFlow\Activities\InventoryService.cs" />
+    <Compile Include="WorkFlow\Activities\InventoryStatus.cs" />
+    <Compile Include="WorkFlow\Activities\IssueDocInventory.cs" />
+    <Compile Include="WorkFlow\Issue\LogRequisitionStatus.cs" />
+    <Compile Include="WorkFlow\Issue\OrderType.cs" />
+    <Compile Include="Finance\PreviousCostPricingDetails.cs" />
+    <Compile Include="WorkFlow\Issue\PickListDetailDeleted.cs" />
+    <Compile Include="WorkFlow\NumberingService.cs" />
+    <Compile Include="WorkFlow\Receipt\LogReceiptStatus.cs" />
+    <Compile Include="WorkFlow\Receipt\PaymentTerm.cs" />
+    <Compile Include="WorkFlow\Receipt\PurchaseOrderStatus.cs" />
+    <Compile Include="WorkFlow\Receipt\PurchaseOrderType.cs" />
+    <Compile Include="WorkFlow\Receipt\ReceiptInvoiceDetail.cs" />
+    <Compile Include="WorkFlow\Receipt\ReceiveDocShortage.cs" />
+    <Compile Include="Finance\ReceivePriceConfirmation.cs" />
+    <Compile Include="Helpers\ReportPrintout.cs" />
+    <Compile Include="Services\OrderService.cs" />
+    <Compile Include="Services\PickListService.cs" />
+    <Compile Include="WorkFlow\Receipt\ShortageReasons.cs" />
+    <Compile Include="Models\Accounts\SubAccount.cs" />
+    <Compile Include="Models\TermOfPayment.cs" />
+    <Compile Include="Location\InternalTransfer.cs" />
+    <Compile Include="WorkFlow\Issue\IssueDocDeleted.cs" />
+    <Compile Include="Models\ItemOwnershipType.cs" />
+    <Compile Include="Models\ItemReceivingUnitType.cs" />
+    <Compile Include="Models\ItemUnit.cs" />
+    <Compile Include="Logs\LogLogin.cs" />
+    <Compile Include="Helpers\Lookup.cs" />
+    <Compile Include="WorkFlow\Issue\OrderDetail.cs" />
+    <Compile Include="Models\PaymentType.cs" />
+    <Compile Include="Location\PhysicalStore.cs" />
+    <Compile Include="Location\Warehouse.cs" />
+    <Compile Include="Location\PickFace.cs" />
+    <Compile Include="WorkFlow\Issue\PickListDetail.cs" />
+    <Compile Include="WorkFlow\Receipt\PO.cs" />
+    <Compile Include="WorkFlow\Receipt\POType.cs" />
+    <Compile Include="Models\ProductReceivingUnitType.cs" />
+    <Compile Include="Models\ProductOwnershipType.cs" />
+    <Compile Include="WorkFlow\Receipt\Receipt.cs" />
+    <Compile Include="WorkFlow\Receipt\ReceiptConfirmationPrintout.cs" />
+    <Compile Include="WorkFlow\Receipt\ReceiptConfirmationStatus.cs" />
+    <Compile Include="WorkFlow\Receipt\ReceiptInvoice.cs" />
+    <Compile Include="WorkFlow\Receipt\ReceiptInvoiceType.cs" />
+    <Compile Include="WorkFlow\Receipt\ReceiptType.cs" />
+    <Compile Include="WorkFlow\Receipt\ReceiveDocConfirmation.cs" />
+    <Compile Include="WorkFlow\Receipt\ReceiveDocDeleted.cs" />
+    <Compile Include="Models\InstitutionType.cs" />
+    <Compile Include="Models\Route.cs" />
+    <Compile Include="Models\OwnershipType.cs" />
+    <Compile Include="Location\ShelfRowColumn.cs" />
+    <Compile Include="WorkFlow\Activities\LossAndAdjustment.cs" />
+    <Compile Include="WorkFlow\Activities\LossAndAdjustmentReason.cs" />
+    <Compile Include="Models\DosageForm.cs" />
+    <Compile Include="Helpers\GeneralInfo.cs" />
+    <Compile Include="Location\HalfPalletLocation.cs" />
+    <Compile Include="WorkFlow\Issue\IssueDoc.cs" />
+    <Compile Include="Models\ItemManufacturer.cs" />
+    <Compile Include="Location\ItemPrefferedLocation.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\ItemSupplier.cs" />
+    <Compile Include="Models\ItemSupplyCategory.cs" />
+    <Compile Include="Models\Manufacturer.cs" />
+    <Compile Include="WorkFlow\Issue\Order.cs" />
+    <Compile Include="WorkFlow\Issue\OrderStatus.cs" />
+    <Compile Include="Location\Pallet.cs" />
+    <Compile Include="Location\PalletLocation.cs" />
+    <Compile Include="WorkFlow\Issue\PickList.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ItemCategory.cs" />
+    <Compile Include="Models\ItemProgram.cs" />
+    <Compile Include="Models\Program.cs" />
+    <Compile Include="Location\RackStatus.cs" />
+    <Compile Include="WorkFlow\Receipt\ReceiveDoc.cs" />
+    <Compile Include="Location\ReceivePallet.cs" />
+    <Compile Include="Models\Institution.cs" />
+    <Compile Include="Models\Region.cs" />
+    <Compile Include="Models\Settings.cs" />
+    <Compile Include="Location\Shelf.cs" />
+    <Compile Include="Helpers\SoftwareSettings.cs" />
+    <Compile Include="Location\StorageType.cs" />
+    <Compile Include="Models\Accounts\Account.cs" />
+    <Compile Include="Models\ItemActivity.cs" />
+    <Compile Include="Models\Accounts\Activity.cs" />
+    <Compile Include="Models\Accounts\Mode.cs" />
+    <Compile Include="WorkFlow\Issue\Issue.cs" />
+    <Compile Include="Models\SubCategory.cs" />
+    <Compile Include="Models\Supplier.cs" />
+    <Compile Include="Models\SupplyCategory.cs" />
+    <Compile Include="Models\Transfer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\CommodityType.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserPaymentType.cs" />
+    <Compile Include="Models\UserPhysicalStore.cs" />
+    <Compile Include="Models\UserStore.cs" />
+    <Compile Include="Models\UserType.cs" />
+    <Compile Include="Models\VEN.cs" />
+    <Compile Include="Finance\MovingAverageHistory.cs" />
+    <Compile Include="Models\Woreda.cs" />
+    <Compile Include="Models\YearEnd.cs" />
+    <Compile Include="Models\Zone.cs" />
+    <Compile Include="Finance\ReceivedSummary.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WorkFlow\Receipt\SupplierType.cs" />
+    <Compile Include="WorkFlow\Requisitions\LogRequisitionEvents.cs" />
+    <Compile Include="WorkFlow\Requisitions\Requisition.cs" />
+    <Compile Include="WorkFlow\Requisitions\RequisitionPriority.cs" />
+    <Compile Include="WorkFlow\Requisitions\RequisitionStatus.cs" />
+    <Compile Include="WorkFlow\Requisitions\RequisitionType.cs" />
+    <Compile Include="WorkFlow\Requisitions\RequistionDetail.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\DAL\HCMIS.DAL.csproj">
+      <Project>{5B87B191-FBFE-4D36-827E-47E7251B3872}</Project>
+      <Name>HCMIS.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\HCMIS.Security\HCMIS.Security.csproj">
+      <Project>{700D59A9-0658-466D-938C-95A471451629}</Project>
+      <Name>HCMIS.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\Models\HCMIS.Concrete.Models.csproj">
+      <Project>{B37FB625-839C-4A38-BEDE-988D726162F0}</Project>
+      <Name>HCMIS.Concrete.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\EthiopianCalendar\EthiopianCalendar.csproj">
+      <Project>{9de1e9f2-5b8d-4ace-85bd-1ab7489e04e9}</Project>
+      <Name>EthiopianCalendar</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Finance\HCMIS.Core.Finance.CostTier\HCMIS.Core.Finance.CostTier.csproj">
+      <Project>{35413540-308A-4921-833A-6927C781381A}</Project>
+      <Name>HCMIS.Core.Finance.CostTier</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repository\HCMIS.Repository\HCMIS.Repository.csproj">
+      <Project>{6be4c3c0-d67b-43b4-beb9-dc7746db027e}</Project>
+      <Name>HCMIS.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Specification\Finance\HCMIS.Specification.Finance\HCMIS.Specification.Finance.csproj">
+      <Project>{c29bd44b-4b20-43bb-a2fa-04f313ef4ecd}</Project>
+      <Name>HCMIS.Specification.Finance</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Specification\HCMIS.Specification.CostTier\HCMIS.Specification.Finance.CostTier.csproj">
+      <Project>{BCB1015E-B8FF-481D-B00A-646CDBBDDC51}</Project>
+      <Name>HCMIS.Specification.Finance.CostTier</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

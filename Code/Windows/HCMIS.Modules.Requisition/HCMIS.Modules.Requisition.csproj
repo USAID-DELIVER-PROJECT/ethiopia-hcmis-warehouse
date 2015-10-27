@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{663796B1-7043-48BD-A4AB-4FB0B94DE3C6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HCMIS.Modules.Requisition</RootNamespace>
+    <AssemblyName>HCMIS.Modules.Requisition</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching">
+      <HintPath>..\packages\EnterpriseLibrary.Caching.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\packages\Unity.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception">
+      <HintPath>..\packages\Unity.Interception.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration">
+      <HintPath>..\packages\Unity.Interception.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="MyGeneration.dOOdads">
+      <HintPath>..\Infrastructure\DAL\bin\Debug\MyGeneration.dOOdads.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CacheSetting.cs" />
+    <Compile Include="Domain\Activity.cs" />
+    <Compile Include="Domain\ActivityGroup.cs" />
+    <Compile Include="Domain\ApprovedDetail.cs" />
+    <Compile Include="Domain\Client.cs" />
+    <Compile Include="Domain\ConsumptionSetting.cs" />
+    <Compile Include="Domain\ProcurementInformation.cs" />
+    <Compile Include="Domain\StockInformation.cs" />
+    <Compile Include="Helpers\CachingHelper.cs" />
+    <Compile Include="Helpers\CodeAttribute.cs" />
+    <Compile Include="Domain\Item.cs" />
+    <Compile Include="Domain\Manufacturer.cs" />
+    <Compile Include="Domain\Modes.cs" />
+    <Compile Include="Domain\PhysicalStore.cs" />
+    <Compile Include="Domain\Request.cs" />
+    <Compile Include="Domain\OrderStatus.cs" />
+    <Compile Include="Domain\PaymentTerm.cs" />
+    <Compile Include="Domain\RequestDetail.cs" />
+    <Compile Include="Domain\Unit.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ActivityRepository.cs" />
+    <Compile Include="Services\ClientRepository.cs" />
+    <Compile Include="Services\ConsumptionSettingRespository.cs" />
+    <Compile Include="Services\PreferenceCalculator.cs" />
+    <Compile Include="Services\StockInformationRepository.cs" />
+    <Compile Include="Services\EnumService.cs" />
+    <Compile Include="Services\CachedRepository.cs" />
+    <Compile Include="Services\ItemRepository.cs" />
+    <Compile Include="Services\ManufacturerRepository.cs" />
+    <Compile Include="Services\ModeEnumService.cs" />
+    <Compile Include="Services\OrderStatusService.cs" />
+    <Compile Include="Domain\Forcasting.cs" />
+    <Compile Include="Services\PaymentTermService.cs" />
+    <Compile Include="Services\RequestRepository.cs" />
+    <Compile Include="Services\ForcastingRepository.cs" />
+    <Compile Include="Services\UnitRepository.cs" />
+    <Compile Include="Services\WarehouseRepository.cs" />
+    <Compile Include="Validation\RequestValidation.cs" />
+    <Compile Include="Validation\RequestDetailError.cs" />
+    <Compile Include="Validation\RequestErrorType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\BLL\HCMIS.BLL.csproj">
+      <Project>{4d833455-e466-4e4f-ad03-352c114711e1}</Project>
+      <Name>HCMIS.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure\DAL\HCMIS.DAL.csproj">
+      <Project>{5b87b191-fbfe-4d36-827e-47e7251b3872}</Project>
+      <Name>HCMIS.DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B37FB625-839C-4A38-BEDE-988D726162F0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HCMIS.Concrete.Models</RootNamespace>
+    <AssemblyName>HCMIS.Concrete.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Presentation\Desktop\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Afterthought, Version=1.0.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\EntityFramework.Patterns.0.7\lib\net40\Afterthought.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\packages\AutoMapper.2.1.267\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.Patterns, Version=0.7.0.32308, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\EntityFramework.Patterns.0.7\lib\net40\EntityFramework.Patterns.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConnectionManager.cs" />
+    <Compile Include="Models\ABC.cs" />
+    <Compile Include="Models\Balance.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Ledger.cs" />
+    <Compile Include="Models\JournalLite.cs" />
+    <Compile Include="Models\LedgerLite.cs" />
+    <Compile Include="HcmisContext.cs" />
+    <Compile Include="Models\ChangeLog.cs" />
+    <Compile Include="Models\Cluster.cs" />
+    <Compile Include="Models\DirectoryUpdate.cs" />
+    <Compile Include="Models\DirectoryUpdateStatu.cs" />
+    <Compile Include="Models\Disposal.cs" />
+    <Compile Include="Models\DisposalReason.cs" />
+    <Compile Include="Models\DosageForm.cs" />
+    <Compile Include="Models\ErrorLog.cs" />
+    <Compile Include="Models\Exchange.cs" />
+    <Compile Include="Models\ExchangeType.cs" />
+    <Compile Include="Models\GeneralInfo.cs" />
+    <Compile Include="Models\HalfPalletLocation.cs" />
+    <Compile Include="Models\InternalTransfer.cs" />
+    <Compile Include="Models\IssueDoc.cs" />
+    <Compile Include="Models\IssueDocDeleted.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\ItemManufacturer.cs" />
+    <Compile Include="Models\ItemOwnershipType.cs" />
+    <Compile Include="Models\ItemPrefferedLocation.cs" />
+    <Compile Include="Models\ItemReceivingUnitType.cs" />
+    <Compile Include="Models\ItemSupplier.cs" />
+    <Compile Include="Models\ItemSupplyCategory.cs" />
+    <Compile Include="Models\ItemUnit.cs" />
+    <Compile Include="Models\ItemUnitCopy.cs" />
+    <Compile Include="Models\LoginLog.cs" />
+    <Compile Include="Models\Manufacturer.cs" />
+    <Compile Include="Models\Mapping\ABCMap.cs" />
+    <Compile Include="Models\Mapping\BalanceMap.cs" />
+    <Compile Include="Models\Mapping\CategoryMap.cs" />
+    <Compile Include="Models\Mapping\ChangeLogMap.cs" />
+    <Compile Include="Models\Mapping\ClusterMap.cs" />
+    <Compile Include="Models\Mapping\PrintLogMap.cs" />
+    <Compile Include="Models\Mapping\DirectoryUpdateMap.cs" />
+    <Compile Include="Models\Mapping\DirectoryUpdateStatuMap.cs" />
+    <Compile Include="Models\Mapping\DisposalMap.cs" />
+    <Compile Include="Models\Mapping\DisposalReasonMap.cs" />
+    <Compile Include="Models\Mapping\DosageFormMap.cs" />
+    <Compile Include="Models\Mapping\ErrorLogMap.cs" />
+    <Compile Include="Models\Mapping\ExchangeMap.cs" />
+    <Compile Include="Models\Mapping\ExchangeTypeMap.cs" />
+    <Compile Include="Models\Mapping\GeneralInfoMap.cs" />
+    <Compile Include="Models\Mapping\HalfPalletLocationMap.cs" />
+    <Compile Include="Models\Mapping\InternalTransferMap.cs" />
+    <Compile Include="Models\Mapping\IssueDocDeletedMap.cs" />
+    <Compile Include="Models\Mapping\IssueDocMap.cs" />
+    <Compile Include="Models\Mapping\ItemManufacturerMap.cs" />
+    <Compile Include="Models\Mapping\ItemMap.cs" />
+    <Compile Include="Models\Mapping\ItemOwnershipTypeMap.cs" />
+    <Compile Include="Models\Mapping\ItemPrefferedLocationMap.cs" />
+    <Compile Include="Models\Mapping\ItemReceivingUnitTypeMap.cs" />
+    <Compile Include="Models\Mapping\ItemSupplierMap.cs" />
+    <Compile Include="Models\Mapping\ItemSupplyCategoryMap.cs" />
+    <Compile Include="Models\Mapping\ItemUnitCopyMap.cs" />
+    <Compile Include="Models\Mapping\ItemUnitMap.cs" />
+    <Compile Include="Models\Mapping\LoginLogMap.cs" />
+    <Compile Include="Models\Mapping\ManufacturerMap.cs" />
+    <Compile Include="Models\Mapping\OrderDetailMap.cs" />
+    <Compile Include="Models\Mapping\OrderMap.cs" />
+    <Compile Include="Models\Mapping\OrderStatuMap.cs" />
+    <Compile Include="Models\Mapping\PalletLocationMap.cs" />
+    <Compile Include="Models\Mapping\PalletMap.cs" />
+    <Compile Include="Models\Mapping\PaymentTypeMap.cs" />
+    <Compile Include="Models\Mapping\PhysicalStoreMap.cs" />
+    <Compile Include="Models\Mapping\PhysicalStoreTypeMap.cs" />
+    <Compile Include="Models\Mapping\PickFaceMap.cs" />
+    <Compile Include="Models\Mapping\PickListDetailMap.cs" />
+    <Compile Include="Models\Mapping\PickListMap.cs" />
+    <Compile Include="Models\Mapping\POMap.cs" />
+    <Compile Include="Models\Mapping\ProductMap.cs" />
+    <Compile Include="Models\Mapping\ProductReceivingUnitTypeMap.cs" />
+    <Compile Include="Models\Mapping\ProductRUOwnershipTypeMap.cs" />
+    <Compile Include="Models\Mapping\ProductsCategoryMap.cs" />
+    <Compile Include="Models\Mapping\ProgramMap.cs" />
+    <Compile Include="Models\Mapping\ProgramProductMap.cs" />
+    <Compile Include="Models\Mapping\RackStatuMap.cs" />
+    <Compile Include="Models\Mapping\ReceiptConfirmationPrintoutMap.cs" />
+    <Compile Include="Models\Mapping\ReceiptConfirmationStatuMap.cs" />
+    <Compile Include="Models\Mapping\ReceiptInvoiceMap.cs" />
+    <Compile Include="Models\Mapping\ReceiptMap.cs" />
+    <Compile Include="Models\Mapping\ReceiptTypeMap.cs" />
+    <Compile Include="Models\Mapping\ReceiveDocConfirmationMap.cs" />
+    <Compile Include="Models\Mapping\ReceiveDocDeletedMap.cs" />
+    <Compile Include="Models\Mapping\ReceiveDocMap.cs" />
+    <Compile Include="Models\Mapping\ReceivePalletMap.cs" />
+    <Compile Include="Models\Mapping\ReceivingUnitMap.cs" />
+    <Compile Include="Models\Mapping\ReceivingUnitTypeMap.cs" />
+    <Compile Include="Models\Mapping\RegionMap.cs" />
+    <Compile Include="Models\Mapping\RouteMap.cs" />
+    <Compile Include="Models\Mapping\RUOwnershipTypeMap.cs" />
+    <Compile Include="Models\Mapping\SchemaScriptMap.cs" />
+    <Compile Include="Models\Mapping\ShelfMap.cs" />
+    <Compile Include="Models\Mapping\ShelfRowColumnMap.cs" />
+    <Compile Include="Models\Mapping\ShortageReasonMap.cs" />
+    <Compile Include="Models\Mapping\SoftwareSettingMap.cs" />
+    <Compile Include="Models\Mapping\StorageTypeMap.cs" />
+    <Compile Include="Models\Mapping\StoreGroupDivisionMap.cs" />
+    <Compile Include="Models\Mapping\StoreGroupMap.cs" />
+    <Compile Include="Models\Mapping\StoreItemMap.cs" />
+    <Compile Include="Models\Mapping\StoreMap.cs" />
+    <Compile Include="Models\Mapping\StoreTypeMap.cs" />
+    <Compile Include="Models\Mapping\STVLogMap.cs" />
+    <Compile Include="Models\Mapping\SubCategoryMap.cs" />
+    <Compile Include="Models\Mapping\SupplierMap.cs" />
+    <Compile Include="Models\Mapping\SupplyCategoryMap.cs" />
+    <Compile Include="Models\Mapping\TransferMap.cs" />
+    <Compile Include="Models\Mapping\TransferTypeMap.cs" />
+    <Compile Include="Models\Mapping\TypeMap.cs" />
+    <Compile Include="Models\Mapping\UnitMap.cs" />
+    <Compile Include="Models\Mapping\UnitofIssueMap.cs" />
+    <Compile Include="Models\Mapping\UserMap.cs" />
+    <Compile Include="Models\Mapping\UserPaymentTypeMap.cs" />
+    <Compile Include="Models\Mapping\UserPhysicalStoreMap.cs" />
+    <Compile Include="Models\Mapping\UserStoreMap.cs" />
+    <Compile Include="Models\Mapping\UserTypeMap.cs" />
+    <Compile Include="Models\Mapping\VENMap.cs" />
+    <Compile Include="Models\Mapping\vwAccountMap.cs" />
+    <Compile Include="Models\Mapping\vwAccountTreeByUserMap.cs" />
+    <Compile Include="Models\Mapping\vwAccountTreeMap.cs" />
+    <Compile Include="Models\Mapping\vwGetAdjustmentMap.cs" />
+    <Compile Include="Models\Mapping\vwGetAllItemMap.cs" />
+    <Compile Include="Models\Mapping\vwGetCategoryMap.cs" />
+    <Compile Include="Models\Mapping\vwGetIssuedItemsByBatchMap.cs" />
+    <Compile Include="Models\Mapping\vwGetIssueMap.cs" />
+    <Compile Include="Models\Mapping\vwGetItemBalanceMap.cs" />
+    <Compile Include="Models\Mapping\vwGetItemMap.cs" />
+    <Compile Include="Models\Mapping\vwGetItemProgramMap.cs" />
+    <Compile Include="Models\Mapping\vwGetItemsByCategoryMap.cs" />
+    <Compile Include="Models\Mapping\vwGetItemSupplierMap.cs" />
+    <Compile Include="Models\Mapping\vwGetLossMap.cs" />
+    <Compile Include="Models\Mapping\vwGetReceivedItemsByBatchMap.cs" />
+    <Compile Include="Models\Mapping\vwGetShelfStoreMap.cs" />
+    <Compile Include="Models\Mapping\vwGetSupplyByCategoryMap.cs" />
+    <Compile Include="Models\Mapping\vwGetSupplyMap.cs" />
+    <Compile Include="Models\Mapping\vwGetSupplyProgramMap.cs" />
+    <Compile Include="Models\Mapping\vwGetUserMap.cs" />
+    <Compile Include="Models\Mapping\vwIssueDocMap.cs" />
+    <Compile Include="Models\Mapping\vwItemOnPalletLocationMap.cs" />
+    <Compile Include="Models\Mapping\vwItemsReadyForDispatchMap.cs" />
+    <Compile Include="Models\Mapping\vwPalletLocationMap.cs" />
+    <Compile Include="Models\Mapping\vwPalletMap.cs" />
+    <Compile Include="Models\Mapping\vwPhysicalStoreForItemMap.cs" />
+    <Compile Include="Models\Mapping\vwReceiptPalletMap.cs" />
+    <Compile Include="Models\Mapping\vwReceivedDocMap.cs" />
+    <Compile Include="Models\Mapping\vwTreeMap.cs" />
+    <Compile Include="Models\Mapping\WeightedAverageLogMap.cs" />
+    <Compile Include="Models\Mapping\WoredaMap.cs" />
+    <Compile Include="Models\Mapping\YearEndMap.cs" />
+    <Compile Include="Models\Mapping\ZoneMap.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderDetail.cs" />
+    <Compile Include="Models\OrderStatu.cs" />
+    <Compile Include="Models\Pallet.cs" />
+    <Compile Include="Models\PalletLocation.cs" />
+    <Compile Include="Models\PaymentType.cs" />
+    <Compile Include="Models\PhysicalStore.cs" />
+    <Compile Include="Models\PhysicalStoreType.cs" />
+    <Compile Include="Models\PickFace.cs" />
+    <Compile Include="Models\PickList.cs" />
+    <Compile Include="Models\PickListDetail.cs" />
+    <Compile Include="Models\PO.cs" />
+    <Compile Include="Models\PrintLog.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductReceivingUnitType.cs" />
+    <Compile Include="Models\ProductRUOwnershipType.cs" />
+    <Compile Include="Models\ProductsCategory.cs" />
+    <Compile Include="Models\Program.cs" />
+    <Compile Include="Models\ProgramProduct.cs" />
+    <Compile Include="Models\RackStatu.cs" />
+    <Compile Include="Models\Receipt.cs" />
+    <Compile Include="Models\ReceiptConfirmationPrintout.cs" />
+    <Compile Include="Models\ReceiptConfirmationStatu.cs" />
+    <Compile Include="Models\ReceiptInvoice.cs" />
+    <Compile Include="Models\ReceiptType.cs" />
+    <Compile Include="Models\ReceiveDoc.cs" />
+    <Compile Include="Models\ReceiveDocConfirmation.cs" />
+    <Compile Include="Models\ReceiveDocDeleted.cs" />
+    <Compile Include="Models\ReceivePallet.cs" />
+    <Compile Include="Models\ReceivingUnit.cs" />
+    <Compile Include="Models\ReceivingUnitType.cs" />
+    <Compile Include="Models\Region.cs" />
+    <Compile Include="Models\Route.cs" />
+    <Compile Include="Models\RUOwnershipType.cs" />
+    <Compile Include="Models\SchemaScript.cs" />
+    <Compile Include="Models\Shelf.cs" />
+    <Compile Include="Models\ShelfRowColumn.cs" />
+    <Compile Include="Models\ShortageReason.cs" />
+    <Compile Include="Models\SoftwareSetting.cs" />
+    <Compile Include="Models\StorageType.cs" />
+    <Compile Include="Models\Store.cs" />
+    <Compile Include="Models\StoreGroup.cs" />
+    <Compile Include="Models\StoreGroupDivision.cs" />
+    <Compile Include="Models\StoreItem.cs" />
+    <Compile Include="Models\StoreType.cs" />
+    <Compile Include="Models\STVLog.cs" />
+    <Compile Include="Models\SubCategory.cs" />
+    <Compile Include="Models\Supplier.cs" />
+    <Compile Include="Models\SupplyCategory.cs" />
+    <Compile Include="Models\Transfer.cs" />
+    <Compile Include="Models\TransferType.cs" />
+    <Compile Include="Models\Type.cs" />
+    <Compile Include="Models\Unit.cs" />
+    <Compile Include="Models\UnitofIssue.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserPaymentType.cs" />
+    <Compile Include="Models\UserPhysicalStore.cs" />
+    <Compile Include="Models\UserStore.cs" />
+    <Compile Include="Models\UserType.cs" />
+    <Compile Include="Models\VEN.cs" />
+    <Compile Include="Models\vwAccount.cs" />
+    <Compile Include="Models\vwAccountTree.cs" />
+    <Compile Include="Models\vwAccountTreeByUser.cs" />
+    <Compile Include="Models\vwGetAdjustment.cs" />
+    <Compile Include="Models\vwGetAllItem.cs" />
+    <Compile Include="Models\vwGetCategory.cs" />
+    <Compile Include="Models\vwGetIssue.cs" />
+    <Compile Include="Models\vwGetIssuedItemsByBatch.cs" />
+    <Compile Include="Models\vwGetItem.cs" />
+    <Compile Include="Models\vwGetItemBalance.cs" />
+    <Compile Include="Models\vwGetItemProgram.cs" />
+    <Compile Include="Models\vwGetItemsByCategory.cs" />
+    <Compile Include="Models\vwGetItemSupplier.cs" />
+    <Compile Include="Models\vwGetLoss.cs" />
+    <Compile Include="Models\vwGetReceivedItemsByBatch.cs" />
+    <Compile Include="Models\vwGetShelfStore.cs" />
+    <Compile Include="Models\vwGetSupply.cs" />
+    <Compile Include="Models\vwGetSupplyByCategory.cs" />
+    <Compile Include="Models\vwGetSupplyProgram.cs" />
+    <Compile Include="Models\vwGetUser.cs" />
+    <Compile Include="Models\vwIssueDoc.cs" />
+    <Compile Include="Models\vwItemOnPalletLocation.cs" />
+    <Compile Include="Models\vwItemsReadyForDispatch.cs" />
+    <Compile Include="Models\vwPallet.cs" />
+    <Compile Include="Models\vwPalletLocation.cs" />
+    <Compile Include="Models\vwPhysicalStoreForItem.cs" />
+    <Compile Include="Models\vwReceiptPallet.cs" />
+    <Compile Include="Models\vwReceivedDoc.cs" />
+    <Compile Include="Models\vwTree.cs" />
+    <Compile Include="Models\WeightedAverageLog.cs" />
+    <Compile Include="Models\Woreda.cs" />
+    <Compile Include="Models\YearEnd.cs" />
+    <Compile Include="Models\Zone.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

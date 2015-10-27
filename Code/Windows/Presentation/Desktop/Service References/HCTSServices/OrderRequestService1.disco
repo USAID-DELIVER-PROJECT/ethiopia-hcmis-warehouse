@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://10.0.1.3/HCTSWebServices/OrderRequestService.asmx?wsdl" docRef="http://10.0.1.3/HCTSWebServices/OrderRequestService.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://10.0.1.3/HCTSWebServices/OrderRequestService.asmx" xmlns:q1="http://hcts.org.et/" binding="q1:OrderRequestServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://10.0.1.3/HCTSWebServices/OrderRequestService.asmx" xmlns:q2="http://hcts.org.et/" binding="q2:OrderRequestServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

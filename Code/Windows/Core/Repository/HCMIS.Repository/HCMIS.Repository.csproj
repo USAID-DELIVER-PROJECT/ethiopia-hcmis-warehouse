@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6BE4C3C0-D67B-43B4-BEB9-DC7746DB027E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HCMIS.Repository</RootNamespace>
+    <AssemblyName>HCMIS.Repository</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helpers\FilterQuery.cs" />
+    <Compile Include="Helpers\DeleteQuery.cs" />
+    <Compile Include="Helpers\Schema.cs" />
+    <Compile Include="Helpers\SelectQuery.cs" />
+    <Compile Include="Helpers\UpdateQuery.cs" />
+    <Compile Include="Queries\Account.cs" />
+    <Compile Include="Queries\Activity.cs" />
+    <Compile Include="Queries\Balance.cs" />
+    <Compile Include="Queries\Category.cs" />
+    <Compile Include="Queries\Cluster.cs" />
+    <Compile Include="Queries\DateTimeHelper.cs" />
+    <Compile Include="Queries\Document.cs" />
+    <Compile Include="Queries\DocumentType.cs" />
+    <Compile Include="Queries\DosageForm.cs" />
+    <Compile Include="Queries\Institution.cs" />
+    <Compile Include="Queries\InstitutionType.cs" />
+    <Compile Include="Queries\InternalTransfer.cs" />
+    <Compile Include="Queries\Inventory.cs" />
+    <Compile Include="Queries\InventoryPeriod.cs" />
+    <Compile Include="Queries\InvoiceType.cs" />
+    <Compile Include="Queries\Issue.cs" />
+    <Compile Include="Queries\IssueDoc.cs" />
+    <Compile Include="Queries\Item.cs" />
+    <Compile Include="Queries\ItemActivity.cs" />
+    <Compile Include="Queries\ItemManufacturer.cs" />
+    <Compile Include="Queries\ItemPrefferedLocation.cs" />
+    <Compile Include="Queries\ItemSupplier.cs" />
+    <Compile Include="Queries\ItemUnit.cs" />
+    <Compile Include="Queries\LogReceiptStatus.cs" />
+    <Compile Include="Queries\LogRequisitionStatus.cs" />
+    <Compile Include="Queries\LookUps.cs" />
+    <Compile Include="Queries\LossAndAdjustment.cs" />
+    <Compile Include="Queries\LossAndAdjustmentReason.cs" />
+    <Compile Include="Queries\Mode.cs" />
+    <Compile Include="Queries\Manufacturer.cs" />
+    <Compile Include="Queries\MovingAverageGroup.cs" />
+    <Compile Include="Queries\MovingAverageHistory.cs" />
+    <Compile Include="Queries\Order.cs" />
+    <Compile Include="Queries\OrderDetail.cs" />
+    <Compile Include="Queries\OwnershipType.cs" />
+    <Compile Include="Queries\Pallet.cs" />
+    <Compile Include="Queries\PalletLocation.cs" />
+    <Compile Include="Queries\PaymentType.cs" />
+    <Compile Include="Queries\PhysicalStore.cs" />
+    <Compile Include="Queries\PickFace.cs" />
+    <Compile Include="Queries\PickList.cs" />
+    <Compile Include="Queries\PickListDetail.cs" />
+    <Compile Include="Queries\PO.cs" />
+    <Compile Include="Queries\Program.cs" />
+    <Compile Include="Queries\PurchaseOrderDetail.cs" />
+    <Compile Include="Queries\PurchaseOrderType.cs" />
+    <Compile Include="Queries\Receipt.cs" />
+    <Compile Include="Queries\ReceiptConfirmationPrintout.cs" />
+    <Compile Include="Queries\ReceiptInvoice.cs" />
+    <Compile Include="Queries\ReceiptInvoiceDetail.cs" />
+    <Compile Include="Queries\ReceiptType.cs" />
+    <Compile Include="Queries\ReceiveDoc.cs" />
+    <Compile Include="Queries\ReceiveDocConfirmation.cs" />
+    <Compile Include="Queries\ReceiveDocDeleted.cs" />
+    <Compile Include="Queries\ReceivePallet.cs" />
+    <Compile Include="Queries\Region.cs" />
+    <Compile Include="Queries\RRF.cs" />
+    <Compile Include="Queries\Shelf.cs" />
+    <Compile Include="Queries\ShelfRowColumn.cs" />
+    <Compile Include="Queries\StorageType.cs" />
+    <Compile Include="Queries\SubCategory.cs" />
+    <Compile Include="Queries\Supplier.cs" />
+    <Compile Include="Queries\SupplyCategory.cs" />
+    <Compile Include="Queries\Transfer.cs" />
+    <Compile Include="Queries\User.cs" />
+    <Compile Include="Queries\UserActivity.cs" />
+    <Compile Include="Queries\UserPaymentType.cs" />
+    <Compile Include="Queries\UserPhysicalStore.cs" />
+    <Compile Include="Queries\UserType.cs" />
+    <Compile Include="Queries\VolumeMetrics.cs" />
+    <Compile Include="Queries\Warehouse.cs" />
+    <Compile Include="Queries\Woreda.cs" />
+    <Compile Include="Queries\YearEnd.cs" />
+    <Compile Include="Queries\Zone.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

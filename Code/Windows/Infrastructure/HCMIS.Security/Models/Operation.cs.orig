@@ -1,0 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Text;
+using HCMIS.Security.Common;
+
+namespace HCMIS.Security.Models
+{
+    [Table("Operation")]
+    public class Operation : IOperation
+    {
+        [Key]
+        public int OperationID { get; set; }
+        [Required]
+        [MaxLength(50)]
+        public string Name { get; set; }
+        [ForeignKey("Parent")]
+        public int? ParentID { get; set; }
+        [ForeignKey("ResourceType")]
+        public int ResourceTypeID { get; set; }
+        public string Description { get; set; }
+
+        public virtual ResourceType ResourceType { get; set; }
+        public virtual Operation Parent { get; set; }
+        public virtual ICollection<Permission> Permissions { get; set; }
+        public virtual ICollection<GroupPermission> GroupPermissions { get; set; }
+    }
+}
